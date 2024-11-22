@@ -1,149 +1,115 @@
 # Sequel Sift
+
 An ETL and ML pipeline for extracting startup data, constructing quantitative tables, and calculating investment risk factors and Sequel Scores.
 
+
+
+![sequel_sift_dataframe](assets/sequel_sift_dataframe.png)
 
 
 ### Quick Start
 
 #### Prerequisites
-
 - Python 3.6+
 - pip package manager
+- Internet connection for web scraping
 
 #### Installation
-
 1. **Create and activate a virtual environment**
-   ```bash
-   # Create virtual environment
-   python3 -m venv venv
-   
-   # Activate virtual environment
-   # On Unix/macOS:
-   source venv/bin/activate
-   # On Windows:
-   venv\Scripts\activate
-   ```
+```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate virtual environment
+# On Unix/macOS:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
+```
 
 2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-3. **Launch the backend web application**
-   ```bash
-   python sift.py
-   ```
+3. **Launch the data extraction**
+```bash
+python sift.py
+```
 
 ### Workflow
 
 #### Data Extraction
--
--
+- Fetches web content from startup company websites
+- Handles URL normalization and retry logic for reliable scraping
+- Extracts key information from HTML content:
+  - Company names
+  - Company descriptions
+  - Founder information
+  - Product details and features
+  - About page content
 
-Next Steps using an open AI to extract information from the companies website.
+#### Data Processing
+- Text cleaning and normalization
+- Natural Language Processing for entity extraction
+- Proper noun identification for company names
+- Founder name extraction from context
+- Product information categorization
 
-#### Data Transformation
--
--
+#### Features
+- Robust retry mechanism with exponential backoff
+- Intelligent company name extraction using NLP
+- Multi-source information gathering
+- Duplicate removal with order preservation
+- Error handling and logging
 
-#### Data Loading
--
--
+#### Output Format
+Data is returned in a pandas DataFrame with the following columns:
+- domain: Website URL
+- company_name: Extracted company name
+- description: Company/product description
+- founders: Set of founder names
+- product_info: Dictionary containing:
+  - products: List of product names
+  - features: List of product features
+  - descriptions: List of product descriptions
 
-#### Models
--
--
+### Testing
 
+Run the test suite:
+```bash
+python test_sequel_sift.py
+```
 
+### Project Structure
+```
+sequel_sift/
+├── sift.py            # Main implementation
+├── test_sequel_sift.py # Test suite
+├── requirements.txt    # Dependencies
+└── README.md          # Documentation
+```
 
+### Dependencies
+- requests: Web scraping
+- beautifulsoup4: HTML parsing
+- nltk: Natural language processing
+- pandas: Data organization
+- re: Regular expressions
+- urllib: URL handling
 
+### Next Steps
+- Implement OpenAI integration for enhanced information extraction
+- Add ML models for risk factor analysis
+- Develop Sequel Score calculation
+- Create data visualization components
+- Build API endpoints for data access
 
+### References
+- [5 Q's for Philipp Omenitsch CTO of Sequel](https://datainnovation.org/2024/06/5-qs-for-philipp-omenitsch-cto-of-sequel/)
 
+### Author
+Emmanuel Ezenwere
 
-### References:
-
-- https://datainnovation.org/2024/06/5-qs-for-philipp-omenitsch-cto-of-sequel/
-
-
-
-
-Thesis
-
-Overview
-Timeline
-Valuation & Funding
-Cap Table
-Comparisons
-Competitors
-Research & Analysis
-Related News
-Patents
-Service Providers
-Signals
-Investors
-Lead Partners on Deals
-Acquisitions
-Subsidiaries
-Exits
-FA
-
-
-Contact Information
-
-Website
-www.stresscoach.app
-Formerly Known As
-Pocketcoach
-Ownership Status
-Acquired/Merged
-(Operating Subsidiary)
-Financing Status
-Formerly VC-backed
-Primary Industry
-Other Healthcare Services
-Other Industries
-Social/Platform Software
-Other Healthcare Technology Systems
-Parent Company
-Kathleen Greerassociates Inc
-Vertical(s)
-Mobile
-Corporate Office
-Mariahilfer Straße 101/1/21
-Vienna, 1060
-Austria
-
-
-
-
-
-
-Theory of revenue curves for startup revenue prediction ,
-
-Predicting micro revenue growth
-write research themed article . plot graphs for revenue for 10 year prediction
-
-
-
-
-X1, X2, X3, X4, X5, Y1=Q1 REV, Y2=Q2 REV, Y3=Q3 REV, Y4=Q4 REV
-
-
-Multiclass Regression Problem, 
-
-Predicting 10 quarters revenue and then use that as an objective way to quantify the success of a startup.
-
-
-Predicted x revenues of the startup.
-
-cummulative sum of the predicted x revenues can then be their risk factor, If we predict a high
-yield (return on investment) for the startup then that is a low risk. and conversely.
-
-
-All parameters must be quantifiable
-All data must be acccessible, in large scale ie
-
-Quarterly returns, ...
-
-
-
+### Version
+1.0.0
