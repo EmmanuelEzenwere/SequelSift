@@ -43,7 +43,7 @@ from nltk import pos_tag
 
 nltk.download('words')
 nltk.download('maxent_ne_chunker_tab')
-
+nltk.download('punkt_tab')
 
 
 
