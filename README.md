@@ -113,3 +113,69 @@ Emmanuel Ezenwere
 
 ### Version
 1.0.0
+
+
+
+
+## Additional Questions
+
+#### Why did we build PitchLeague.ai:
+
+PitchLeague.ai was built to:
+
+- Automate initial screening of startup pitches
+- Create a standardized way to evaluate startups
+- Reduce time spent on manual pitch review
+- Build a database of startup patterns and insights
+- Create a tool to help founders improve and optimize their pitchdecks
+
+
+#### What is our goal with this website:
+
+
+- Efficiently identify promising startups that match Sequel's investment thesis
+- Create a data-driven approach to early-stage investing
+- Generate insights about successful startup patterns
+- Build a community of founders and investors
+- Create a tool to help founders improve and optimize their pitchdecks
+
+
+
+#### How would you improve this product:
+
+
+- Add competitive analysis features
+- Create founder success pattern recognition
+- Add automated due diligence checklists
+- Add more AI coach product pictures to the website
+- Extend the capabilities of Sequel's AI coach and Sequel Score Model, [Sequel Score Model Proposal.pdf](SequelScoreModelProposal.pdf) attached.
+- Implement robust data science experiment design structure to test effectiveness of Sequel AI coach , A/B Tests.
+- Use user feedback to improve the product until Product Market Fit
+
+
+#### How can we combine Pitch Decks and Website Crawling:
+
+Data Integration:
+
+Cross-validate claims made in pitch decks with website data
+Track changes in company positioning over time
+Verify team information and growth
+Compare market sizing claims with actual market presence
+
+
+Analyze Opportunities:
+
+Track execution against pitched roadmap
+Identify red flags and discrepancies
+Monitor product evolution
+Validate customer testimonials
+Track milestone achievement
+
+
+Automated Insights:
+
+Generate comprehensive company profiles
+Create growth trajectory predictions
+Identify market positioning shifts
+Monitor competitive landscape changes
+Track product development velocity
