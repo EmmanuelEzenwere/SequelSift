@@ -41,10 +41,12 @@ import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk import pos_tag
 
-nltk.download('words')
-nltk.download('maxent_ne_chunker_tab')
-nltk.download('punkt_tab')
-
+nltk.download('punkt')  # Tokenization
+nltk.download('words')  # Wordlist for English words
+nltk.download('maxent_ne_chunker')  # For Named Entity Recognition
+nltk.download('averaged_perceptron_tagger')  # POS Tagger
+nltk.download('stopwords')  # Common stopwords list
+nltk.download('wordnet')  # WordNet lexical database
 
 
 
