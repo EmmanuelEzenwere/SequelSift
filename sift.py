@@ -45,6 +45,7 @@ nltk.download('punkt')  # Tokenization
 nltk.download('words')  # Wordlist for English words
 nltk.download('maxent_ne_chunker')  # For Named Entity Recognition
 nltk.download('averaged_perceptron_tagger')  # POS Tagger
+nltk.download('averaged_perceptron_tagger_eng')
 nltk.download('stopwords')  # Common stopwords list
 nltk.download('wordnet')  # WordNet lexical database
 
