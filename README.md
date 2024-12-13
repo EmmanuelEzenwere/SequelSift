@@ -117,17 +117,7 @@ Emmanuel Ezenwere
 
 
 
-## Additional Questions
-
-#### Why did we build PitchLeague.ai:
-
-PitchLeague.ai was built to:
-
-- Automate initial screening of startup pitches
-- Create a standardized way to evaluate startups
-- Reduce time spent on manual pitch review
-- Build a database of startup patterns and insights
-- Create a tool to help founders improve and optimize their pitchdecks
+## Q&A
 
 
 #### What is our goal with this website:
